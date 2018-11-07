@@ -1,0 +1,11 @@
+filebeat.prospectors:
+- type: log
+  enabled: true
+  paths:
+    - '/logs/*.log'
+#  fields: 
+#    app_id: service-a
+#    env: dev
+
+output.logstash:
+  hosts: ["logstash:5000"]

@@ -49,6 +49,14 @@ services:
     depends_on:
       - elasticsearch
 
+  filebeat:
+    build:
+      context: filebeat
+    volumes: 
+      - ./filebeat/logs:/logs
+    networks:
+      - elk
+
 networks:
 
   elk:
